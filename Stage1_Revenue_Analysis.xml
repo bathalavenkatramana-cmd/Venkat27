@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExecutiveAnalysis>
+  <DocumentInfo>
+    <Title>Stage 1 - Revenue and Sales Strategy Analysis</Title>
+    <Subtitle>Direct Sales Revenue Concentration and Programmatic Performance Review</Subtitle>
+    <Period>Q1 2025 through Q2 2026 (January 2025 - May 2026)</Period>
+    <PreparedBy>AdOps Strategy Team</PreparedBy>
+    <Classification>Executive Review - Confidential</Classification>
+  </DocumentInfo>
+
+  <ExecutiveSummary>
+    <Headline>We earned $10.3M in 18 months. But $3.5M of that came from advertisers who have not come back. We are replacing churn at only 18 cents on the dollar. That is a revenue crisis hiding behind a decent topline number.</Headline>
+    <KeyNumbers>
+      <Item label="Total Revenue (Q1 2025 - Q2 2026)">$10,310,286</Item>
+      <Item label="Direct Revenue">$8,667,845 (84.1% of total)</Item>
+      <Item label="Programmatic Revenue">$1,595,903 (15.5% of total)</Item>
+      <Item label="Revenue from Churned Advertisers (spent 2025, not back in 2026)">$3,503,967</Item>
+      <Item label="Revenue from New 2026 Advertisers">$647,239</Item>
+      <Item label="Net Revenue Gap (Churn minus New)">-$2,856,728</Item>
+      <Item label="Top 10 Advertiser Concentration (Direct)">49.2%</Item>
+      <Item label="Top 3 Programmatic Partner Concentration">86.5%</Item>
+    </KeyNumbers>
+  </ExecutiveSummary>
+
+  <Section1_RevenueOverview>
+    <Title>OVERALL REVENUE PERFORMANCE</Title>
+    <Narrative>The business generated $10.3M across direct, programmatic, and house channels over six quarters. Direct sales is the engine. Programmatic is underperforming relative to the impressions it serves. House ads represent wasted inventory that earns nearly nothing.</Narrative>
+
+    <RevenueByChannel>
+      <Channel name="Direct" impressions="439,410,754" revenue="$8,667,845" ecpm="$19.73" share="84.1%" />
+      <Channel name="Direct - Sponsorship" impressions="89,311,195" revenue="$2,461,815" ecpm="$27.56" share="23.9%" />
+      <Channel name="Direct - Standard" impressions="350,099,559" revenue="$6,206,029" ecpm="$17.73" share="60.2%" />
+      <Channel name="Programmatic" impressions="802,585,314" revenue="$1,595,903" ecpm="$1.99" share="15.5%" />
+      <Channel name="House" impressions="160,609,600" revenue="$46,538" ecpm="$0.29" share="0.5%" />
+      <Channel name="Grand Total" impressions="1,402,605,668" revenue="$10,310,286" ecpm="$7.35" share="100%" />
+    </RevenueByChannel>
+
+    <QuarterlyTrend>
+      <Quarter period="Q1 2025" direct="$701,742" programmatic="$371,870" house="$12,122" total="$1,085,734" />
+      <Quarter period="Q2 2025" direct="$1,677,237" programmatic="$300,905" house="$6,577" total="$1,984,718" />
+      <Quarter period="Q3 2025" direct="$979,462" programmatic="$339,484" house="$10,966" total="$1,329,912" />
+      <Quarter period="Q4 2025" direct="$3,118,230" programmatic="$82,747" house="$2,896" total="$3,203,873" />
+      <Quarter period="Q1 2026" direct="$1,349,890" programmatic="$237,544" house="$9,217" total="$1,596,650" />
+      <Quarter period="Q2 2026" direct="$841,285" programmatic="$263,353" house="$4,759" total="$1,109,398" />
+    </QuarterlyTrend>
+
+    <Insight>Direct earns $19.73 per thousand impressions. Programmatic earns $1.99. That is a 10x gap. Every impression that goes to programmatic instead of a direct deal costs us roughly $17.74 per thousand in lost revenue. This is the single biggest yield lever available.</Insight>
+    <Insight>Q4 2025 was the best quarter at $3.2M total. It also had the fewest total impressions (209M). Why? Direct campaigns consumed the inventory at premium rates. When direct is full, everything works. When it is not, programmatic fills at pennies.</Insight>
+    <Insight>House ads served 160 million impressions over this period. At even $2 eCPM, that is $320,000 in lost revenue. At $5 eCPM, it is $800,000. House ads should never exceed 5% of total impressions.</Insight>
+  </Section1_RevenueOverview>
+
+  <Section2_DirectSales_AdvertiserSegmentation>
+    <Title>DIRECT SALES - ADVERTISER SEGMENTATION</Title>
+    <Narrative>We classified every direct advertiser into five categories based on their spending behavior across Q1 2025 through Q2 2026. This tells us who is reliable, who left, who is new, and who came once and vanished. The picture is not comforting.</Narrative>
+
+    <Category1_AlwaysOn>
+      <Label>ALWAYS-ON: Active in both 2025 AND 2026 across multiple quarters</Label>
+      <Description>These are the backbone. They keep spending. They trust us. Protect them at all costs.</Description>
+      <TotalRevenue>$3,411,460</TotalRevenue>
+      <ShareOfTotal>39.4%</ShareOfTotal>
+      <Advertisers>
+        <Advertiser name="ROLEX S.A." q1_25="$140,974" q2_25="$155,297" q3_25="$60,823" q4_25="$332,275" q1_26="$102,512" q2_26="$99,857" total="$891,738" quarters="6/6" trend="Stable" />
+        <Advertiser name="TOYOTA MOTOR NORTH AMERICA INC" q1_25="$37,644" q2_25="$92,631" q3_25="$2,495" q4_25="$337,234" q1_26="$28,539" q2_26="$95,672" total="$594,215" quarters="6/6" trend="Volatile but consistent" />
+        <Advertiser name="ALLSTATE CORPORATION" q1_25="$0" q2_25="$0" q3_25="$32,590" q4_25="$84,485" q1_26="$52,538" q2_26="$19,251" total="$188,865" quarters="6/6" trend="Growing then declining" />
+        <Advertiser name="SimpleFeed" q1_25="$18,693" q2_25="$12,732" q3_25="$25,732" q4_25="$51,948" q1_26="$29,885" q2_26="$13,713" total="$152,702" quarters="6/6" trend="Stable mid-tier" />
+        <Advertiser name="Kargo" q1_25="$137" q2_25="$8,235" q3_25="$2,792" q4_25="$591" q1_26="$1,767" q2_26="$4,203" total="$17,725" quarters="6/6" trend="Low but consistent" />
+        <Advertiser name="Hewlett Packard Company" q2_25="$123,116" q1_26="$102,403" q2_26="$107,585" total="$333,104" quarters="3/6" trend="Strong and growing YoY" />
+        <Advertiser name="Novartis" q2_25="$136,915" q1_26="$221,220" q2_26="$15,395" total="$373,530" quarters="3/6" trend="Growing significantly" />
+        <Advertiser name="P and G" q1_25="$84,340" q1_26="$50,917" q2_26="$38,681" total="$173,938" quarters="4/6" trend="Returning but lower spend" />
+        <Advertiser name="APPLE INC" q3_25="$40,000" q4_25="$61,943" q1_26="$15,000" q2_26="$15,000" total="$131,943" quarters="4/6" trend="Declining spend per quarter" />
+        <Advertiser name="PEPSICO INC" q4_25="$135,755" q2_26="$34,430" total="$170,185" quarters="3/6" trend="Returning at lower level" />
+        <Advertiser name="ELI LILLY INTERNATIONAL" q4_25="$85,909" q1_26="$90,741" total="$176,650" quarters="2/6" trend="Cross-year active" />
+        <Advertiser name="Serum Institute India" q4_25="$33,223" q1_26="$12,122" q2_26="$33,989" total="$79,333" quarters="3/6" trend="Stable cross-year" />
+        <Advertiser name="Philip Morris Products" q3_25="$26,901" q4_25="$10,041" q1_26="$39,534" total="$76,476" quarters="4/6" trend="Growing" />
+        <Advertiser name="The Leukemia and Lymphoma Society" q3_25="$5,982" q4_25="$24,392" q1_26="$22,126" total="$52,501" quarters="3/6" trend="Stable" />
+        <Advertiser name="Baille Gifford" q2_25="$2,661" q3_25="$581" q4_25="$2,987" q2_26="$53" total="$6,281" quarters="4/6" trend="Low consistent" />
+      </Advertisers>
+    </Category1_AlwaysOn>
+
+    <Category2_Churned>
+      <Label>CHURNED: Spent in 2025, zero activity in 2026</Label>
+      <Description>This is the alarm bell. These advertisers gave us money last year and have not returned. Every single one is a sales call waiting to happen. The longer we wait, the harder the reactivation.</Description>
+      <TotalRevenue>$3,503,967</TotalRevenue>
+      <ShareOfTotal>40.4% of all direct revenue came from advertisers who are now gone</ShareOfTotal>
+      <HighPriority note="Over $100K spent in 2025">
+        <Advertiser name="American Family Insurance" q2_25="$500,006" total="$500,006" risk="CRITICAL" lastActive="Q2 2025" />
+        <Advertiser name="CELEBRITY CRUISES" q4_25="$340,975" total="$340,975" risk="CRITICAL" lastActive="Q4 2025" />
+        <Advertiser name="ALLY FINANCIAL INC" q3_25="$270,903" total="$270,903" risk="CRITICAL" lastActive="Q3 2025" />
+        <Advertiser name="LinkedIn Marketing Solutions" q4_25="$247,482" total="$247,482" risk="CRITICAL" lastActive="Q4 2025" />
+        <Advertiser name="General Catalyst" q3_25="$117,831" q4_25="$107,635" total="$225,466" risk="HIGH" lastActive="Q4 2025" />
+        <Advertiser name="JAGUAR LAND ROVER NORTH AMERICA" q2_25="$29,999" q3_25="$138,749" q4_25="$27,263" total="$196,011" risk="HIGH" lastActive="Q4 2025" />
+        <Advertiser name="Diriyah Gate Development Authority" q1_25="$40,000" q2_25="$138,007" total="$178,007" risk="HIGH" lastActive="Q2 2025" />
+        <Advertiser name="SOMPO HOLDINGS INC" q1_25="$149,511" total="$149,511" risk="HIGH" lastActive="Q1 2025" />
+        <Advertiser name="PRUDENTIAL FINANCIAL INC" q2_25="$122,122" total="$122,122" risk="HIGH" lastActive="Q2 2025" />
+        <Advertiser name="PFIZER INC" q2_25="$102,905" total="$103,123" risk="HIGH" lastActive="Q2 2025" />
+        <Advertiser name="Lego" q3_25="$80,900" q4_25="$21,464" total="$102,365" risk="MEDIUM" lastActive="Q4 2025" />
+      </HighPriority>
+      <MediumPriority note="$50K to $100K spent in 2025">
+        <Advertiser name="CIRCLE" q2_25="$92,956" total="$92,956" risk="MEDIUM" lastActive="Q2 2025" />
+        <Advertiser name="WKKF" q1_25="$90,605" total="$90,605" risk="MEDIUM" lastActive="Q1 2025" />
+        <Advertiser name="Hims and Hers Health" q4_25="$90,595" total="$90,595" risk="MEDIUM" lastActive="Q4 2025" />
+        <Advertiser name="Fortescue Ltd" q3_25="$50,892" q4_25="$37,499" total="$88,391" risk="MEDIUM" lastActive="Q4 2025" />
+        <Advertiser name="BRISTOL-MYERS SQUIBB" q4_25="$75,759" total="$75,759" risk="MEDIUM" lastActive="Q4 2025" />
+        <Advertiser name="PNC Bank" q4_25="$69,374" total="$69,374" risk="MEDIUM" lastActive="Q4 2025" />
+        <Advertiser name="China Daily" q4_25="$63,629" total="$63,629" risk="MEDIUM" lastActive="Q4 2025" />
+        <Advertiser name="World Government Summit" q1_25="$58,930" q4_25="$4,000" total="$62,930" risk="MEDIUM" lastActive="Q4 2025" />
+        <Advertiser name="TriNet Group" q2_25="$27,776" q3_25="$32,758" total="$60,535" risk="MEDIUM" lastActive="Q3 2025" />
+        <Advertiser name="The Riyadh Hub NMDC" q2_25="$47,229" q3_25="$12,646" total="$59,875" risk="MEDIUM" lastActive="Q3 2025" />
+        <Advertiser name="The Art of Living Foundation" q2_25="$50,141" total="$50,141" risk="MEDIUM" lastActive="Q2 2025" />
+      </MediumPriority>
+      <LowPriority note="Under $50K">
+        <Advertiser name="Bloomberg Philanthropy" q4_25="$42,099" total="$42,099" lastActive="Q4 2025" />
+        <Advertiser name="Advanced Technology Research Council" q1_25="$39,320" total="$39,320" lastActive="Q1 2025" />
+        <Advertiser name="Laurent Perrier Global" q3_25="$3,629" q4_25="$31,019" total="$34,648" lastActive="Q4 2025" />
+        <Advertiser name="Ralph Lauren Corporation" q4_25="$31,069" total="$31,069" lastActive="Q4 2025" />
+        <Advertiser name="Paramount Pictures" q3_25="$26,976" total="$26,976" lastActive="Q3 2025" />
+        <Advertiser name="Patagonia" q2_25="$12,500" q3_25="$13,126" total="$25,626" lastActive="Q3 2025" />
+        <Advertiser name="SPARK FOUNDATION" q4_25="$25,000" total="$25,000" lastActive="Q4 2025" />
+        <Advertiser name="Siemens" q1_25="$24,402" total="$24,402" lastActive="Q1 2025" />
+        <Advertiser name="Dolce and Gabbana" q1_25="$5,933" q4_25="$7,344" total="$13,277" lastActive="Q4 2025" />
+        <Advertiser name="Mandarin Oriental" q4_25="$13,036" total="$13,036" lastActive="Q4 2025" />
+        <Advertiser name="Aramco" q4_25="$10,931" total="$10,931" lastActive="Q4 2025" />
+        <Advertiser name="Turkish Airlines" q4_25="$4,166" total="$4,166" lastActive="Q4 2025" />
+        <Advertiser name="Ballymore" q3_25="$584" q4_25="$1,037" total="$1,621" lastActive="Q4 2025" />
+      </LowPriority>
+    </Category2_Churned>
+  </Section2_DirectSales_AdvertiserSegmentation>
+
+  <Section3_NewAdvertisers2026>
+    <Title>NEW IN 2026: First-time spenders not seen in 2025</Title>
+    <Description>These are the net new logos sales brought in. Good sign that the pipeline is alive. Bad sign that the total volume does not come close to replacing what we lost.</Description>
+    <TotalRevenue>$647,239</TotalRevenue>
+    <AdvertiserCount>22</AdvertiserCount>
+    <ReplacementRatio>For every $1 we lost to churn, we replaced only $0.18 with new business</ReplacementRatio>
+    <HighValue note="Over $50K in 2026">
+      <Advertiser name="TIAA" q1_26="$163,339" total="$163,339" potential="HIGH - Big first spend, finance vertical" />
+      <Advertiser name="RELIANCE INDUSTRIES" q2_26="$118,049" total="$118,049" potential="HIGH - Major conglomerate, watch for repeat" />
+      <Advertiser name="JPMORGAN CHASE" q2_26="$98,566" total="$98,566" potential="HIGH - Tier 1 brand, must convert to recurring" />
+      <Advertiser name="TARGET CORPORATION" q1_26="$24,302" q2_26="$50,775" total="$75,077" potential="HIGH - Growing QoQ, good signal" />
+      <Advertiser name="Department for Business and Trade" q1_26="$52,150" total="$52,150" potential="MEDIUM - Government, may be one-off" />
+      <Advertiser name="TCS World Travel" q1_26="$33,257" q2_26="$16,743" total="$50,000" potential="MEDIUM - Luxury travel" />
+    </HighValue>
+    <MediumValue note="$10K to $50K">
+      <Advertiser name="ELITE MEDIA" q1_26="$25,418" total="$25,418" potential="MEDIUM" />
+      <Advertiser name="American Heart Association" q1_26="$7,621" q2_26="$13,887" total="$21,508" potential="MEDIUM - Growing" />
+      <Advertiser name="iGarden" q2_26="$13,842" total="$13,842" potential="LOW" />
+    </MediumValue>
+    <LowValue note="Under $10K">
+      <Advertiser name="Booking.com Limited" q2_26="$7,052" total="$7,052" potential="MEDIUM - Global brand, room to grow" />
+      <Advertiser name="The Indian Hotels Company Ltd" q1_26="$6,662" q2_26="$338" total="$7,000" potential="LOW" />
+      <Advertiser name="S and P" q1_26="$1,174" q2_26="$1,664" total="$2,837" potential="LOW" />
+      <Advertiser name="South Coast Plaza" q1_26="$173" q2_26="$2,584" total="$2,757" potential="LOW" />
+      <Advertiser name="Global Kigyo Co Ltd" q2_26="$3,459" total="$3,459" potential="LOW" />
+      <Advertiser name="Pimco" q2_26="$1,800" total="$1,800" potential="LOW" />
+      <Advertiser name="LVMH Bulgari" q1_26="$429" q2_26="$1,072" total="$1,500" potential="LOW but luxury vertical" />
+      <Advertiser name="InvescoEMEA" q2_26="$1,327" total="$1,327" potential="LOW" />
+      <Advertiser name="Mobkoi" q1_26="$1,200" total="$1,200" potential="LOW" />
+      <Advertiser name="F and C" q1_26="$523" q2_26="$377" total="$900" potential="LOW" />
+      <Advertiser name="JLR" q1_26="$711" total="$711" potential="LOW - Note Jaguar Land Rover also churned separately" />
+      <Advertiser name="Allianz" q1_26="$227" q2_26="$480" total="$707" potential="LOW" />
+      <Advertiser name="Cartier" q2_26="$95" total="$95" potential="LOW but luxury brand" />
+    </LowValue>
+  </Section3_NewAdvertisers2026>
+
+  <Section4_OneTimeSpenders>
+    <Title>ONE-TIME SPENDERS: Appeared in only one quarter ever</Title>
+    <Description>These advertisers came in, spent, and vanished. Either the campaign did not perform, the relationship was transactional, or nobody followed up. Each one is a conversation that did not happen.</Description>
+    <TotalRevenue>$2,339,571</TotalRevenue>
+    <AdvertiserCount>22 significant (over $20K)</AdvertiserCount>
+    <TopOneTimers>
+      <Advertiser name="CELEBRITY CRUISES" quarter="Q4 2025" amount="$340,975" vertical="Travel/Luxury" />
+      <Advertiser name="ALLY FINANCIAL INC" quarter="Q3 2025" amount="$270,903" vertical="Finance" />
+      <Advertiser name="LinkedIn Marketing Solutions" quarter="Q4 2025" amount="$247,482" vertical="Tech/B2B" />
+      <Advertiser name="TIAA" quarter="Q1 2026" amount="$163,339" vertical="Finance" />
+      <Advertiser name="SOMPO HOLDINGS INC" quarter="Q1 2025" amount="$149,511" vertical="Insurance" />
+      <Advertiser name="PRUDENTIAL FINANCIAL INC" quarter="Q2 2025" amount="$122,122" vertical="Finance" />
+      <Advertiser name="RELIANCE INDUSTRIES" quarter="Q2 2026" amount="$118,049" vertical="Conglomerate" />
+      <Advertiser name="PFIZER INC" quarter="Q2 2025" amount="$102,905" vertical="Pharma" />
+      <Advertiser name="JPMORGAN CHASE" quarter="Q2 2026" amount="$98,566" vertical="Finance" />
+      <Advertiser name="CIRCLE" quarter="Q2 2025" amount="$92,956" vertical="Crypto/Finance" />
+      <Advertiser name="WKKF" quarter="Q1 2025" amount="$90,605" vertical="Non-profit" />
+      <Advertiser name="Hims and Hers Health" quarter="Q4 2025" amount="$90,595" vertical="Health/DTC" />
+      <Advertiser name="BRISTOL-MYERS SQUIBB" quarter="Q4 2025" amount="$75,759" vertical="Pharma" />
+      <Advertiser name="PNC Bank" quarter="Q4 2025" amount="$69,374" vertical="Finance" />
+      <Advertiser name="China Daily" quarter="Q4 2025" amount="$63,629" vertical="Media/Government" />
+    </TopOneTimers>
+    <Insight>Finance and Pharma dominate the one-time list. These are verticals with budget. They tested us and did not come back. That is either a performance issue, a relationship issue, or a follow-up issue. We need to know which.</Insight>
+  </Section4_OneTimeSpenders>
+
+  <Section5_RepeatedButLapsed>
+    <Title>REPEATED BUT LAPSED: Spent 2 to 3 quarters, then stopped</Title>
+    <Description>These had momentum. They came back at least once. Something broke the pattern. These are the warmest reactivation leads because they already proved willingness to repeat.</Description>
+    <TotalRevenue>$1,131,391</TotalRevenue>
+    <Advertisers>
+      <Advertiser name="General Catalyst" activeQuarters="Q3 2025, Q4 2025" lastActive="Q4 2025" total="$225,466" gap="6 months" />
+      <Advertiser name="JAGUAR LAND ROVER" activeQuarters="Q2 2025, Q3 2025, Q4 2025" lastActive="Q4 2025" total="$196,011" gap="6 months" />
+      <Advertiser name="Diriyah Gate Development Authority" activeQuarters="Q1 2025, Q2 2025" lastActive="Q2 2025" total="$178,007" gap="12 months" />
+      <Advertiser name="Lego" activeQuarters="Q3 2025, Q4 2025" lastActive="Q4 2025" total="$102,365" gap="6 months" />
+      <Advertiser name="Fortescue Ltd" activeQuarters="Q3 2025, Q4 2025" lastActive="Q4 2025" total="$88,391" gap="6 months" />
+      <Advertiser name="The Macallan" activeQuarters="Q4 2025, Q2 2026" lastActive="Q2 2026" total="$77,687" gap="Sporadic but active" />
+      <Advertiser name="World Government Summit" activeQuarters="Q1 2025, Q4 2025" lastActive="Q4 2025" total="$62,930" gap="6 months" />
+      <Advertiser name="TriNet Group" activeQuarters="Q2 2025, Q3 2025" lastActive="Q3 2025" total="$60,535" gap="9 months" />
+      <Advertiser name="The Riyadh Hub NMDC" activeQuarters="Q2 2025, Q3 2025" lastActive="Q3 2025" total="$59,875" gap="9 months" />
+      <Advertiser name="Laurent Perrier Global" activeQuarters="Q3 2025, Q4 2025" lastActive="Q4 2025" total="$34,648" gap="6 months" />
+      <Advertiser name="Patagonia" activeQuarters="Q2 2025, Q3 2025" lastActive="Q3 2025" total="$25,626" gap="9 months" />
+      <Advertiser name="SINGAPORE AIRLINES" activeQuarters="Q1 2025, Q2 2025" lastActive="Q2 2025" total="$4,026" gap="12 months" />
+    </Advertisers>
+  </Section5_RepeatedButLapsed>
+
+  <Section6_RevenueConcentration>
+    <Title>REVENUE CONCENTRATION - TOP 10 ANALYSIS</Title>
+    <Description>How dependent are we on a handful of advertisers? If any of the top 10 walks away tomorrow, what happens to the business?</Description>
+    <Top10Table>
+      <Rank position="1" advertiser="ROLEX S.A." total="$891,738" share="10.3%" category="Always-On" status="SAFE" />
+      <Rank position="2" advertiser="TOYOTA MOTOR NORTH AMERICA" total="$594,215" share="6.9%" category="Always-On" status="SAFE" />
+      <Rank position="3" advertiser="American Family Insurance" total="$500,006" share="5.8%" category="Churned" status="GONE" />
+      <Rank position="4" advertiser="Project Management Institute" total="$413,955" share="4.8%" category="Cross-year" status="ACTIVE" />
+      <Rank position="5" advertiser="Novartis" total="$373,530" share="4.3%" category="Always-On" status="SAFE" />
+      <Rank position="6" advertiser="CELEBRITY CRUISES" total="$340,975" share="3.9%" category="One-Time" status="GONE" />
+      <Rank position="7" advertiser="Hewlett Packard Company" total="$333,104" share="3.8%" category="Always-On" status="SAFE" />
+      <Rank position="8" advertiser="Cognizant" total="$302,290" share="3.5%" category="Cross-year" status="ACTIVE" />
+      <Rank position="9" advertiser="ALLY FINANCIAL INC" total="$270,903" share="3.1%" category="One-Time" status="GONE" />
+      <Rank position="10" advertiser="LinkedIn Marketing Solutions" total="$247,482" share="2.9%" category="One-Time" status="GONE" />
+    </Top10Table>
+    <ConcentrationMetrics>
+      <Metric label="Top 10 Combined Revenue">$4,268,198</Metric>
+      <Metric label="Top 10 Share of Direct Revenue">49.2%</Metric>
+      <Metric label="Top 10 Advertisers Still Active">6 of 10</Metric>
+      <Metric label="Top 10 Advertisers Gone">4 of 10 (American Family, Celebrity Cruises, Ally, LinkedIn)</Metric>
+      <Metric label="Revenue from Gone Top 10 Advertisers">$1,359,366 (15.7% of total direct)</Metric>
+    </ConcentrationMetrics>
+    <Insight>Half our revenue sits with 10 advertisers. Four of those 10 are already gone. That means 15.7% of our historical direct revenue no longer has a source. This is not a future risk. This is a current reality.</Insight>
+  </Section6_RevenueConcentration>
+
+  <Section7_ProgrammaticAnalysis>
+    <Title>PROGRAMMATIC REVENUE - PARTNER PERFORMANCE</Title>
+    <Narrative>Programmatic contributes 15.5% of revenue but consumes 57% of impressions. The yield is terrible relative to direct. Media Mint manages this channel. We need answers.</Narrative>
+
+    <PartnerBreakdown>
+      <Partner name="Media.net" q1_25="$166,975" q2_25="$141,140" q3_25="$130,331" q4_25="$13,019" q1_26="$75,379" q2_26="$88,337" total="$615,182" share="38.5%" trend="Crashed Q4 2025 by 90%, recovering slowly" />
+      <Partner name="Ad Exchange (Google)" q1_25="$62,444" q2_25="$64,191" q3_25="$94,435" q4_25="$43,291" q1_26="$80,514" q2_26="$92,176" total="$437,052" share="27.4%" trend="Growing - best performer in 2026" />
+      <Partner name="Amazon/A9" q1_25="$97,615" q2_25="$53,493" q3_25="$71,607" q4_25="$14,775" q1_26="$48,803" q2_26="$42,110" total="$328,403" share="20.6%" trend="Crashed Q4, partial recovery only" />
+      <Partner name="Untagged" q1_25="$27,992" q2_25="$31,813" q3_25="$36,348" q4_25="$8,157" q1_26="$18,533" q2_26="$20,143" total="$142,986" share="9.0%" trend="Declining, needs identification" />
+      <Partner name="Media.net Bytes" q3_25="$132" q4_25="$3,243" q1_26="$13,770" q2_26="$15,337" total="$32,483" share="2.0%" trend="New and growing fast" />
+      <Partner name="Magnite" q1_25="$4,000" q2_25="$10,263" q3_25="$6,629" q4_25="$260" q1_26="$27" q2_26="$0" total="$21,180" share="1.3%" trend="Effectively dead" />
+      <Partner name="SimpleFeed" q1_25="$12,837" q1_26="$433" total="$13,270" share="0.8%" trend="Dead" />
+      <Partner name="InfoLinks" q2_26="$5,195" total="$5,195" share="0.3%" trend="New addition" />
+    </PartnerBreakdown>
+
+    <ProgrammaticConcentration>
+      <Metric label="Top 3 Partners Share">86.5% (Media.net + Ad Exchange + Amazon)</Metric>
+      <Metric label="Single Partner Dependency (Media.net)">38.5%</Metric>
+      <Assessment>Extremely concentrated. One partner policy change away from losing 38% of programmatic revenue.</Assessment>
+    </ProgrammaticConcentration>
+
+    <Q4_2025_Crash>
+      <Title>THE Q4 2025 PROGRAMMATIC COLLAPSE</Title>
+      <Q3Revenue>$339,484</Q3Revenue>
+      <Q4Revenue>$82,747</Q4Revenue>
+      <Drop>-$256,737 (-76%)</Drop>
+      <MediaNetDrop>From $130,331 to $13,019 (-90%)</MediaNetDrop>
+      <AmazonDrop>From $71,607 to $14,775 (-79%)</AmazonDrop>
+      <LikelyExplanation>Q4 2025 had the highest direct revenue ever ($3.1M). Direct campaigns consumed available inventory, leaving minimal remnant for programmatic. This is not necessarily bad if direct is paying 10x the CPM. But we need to confirm this with Media Mint.</LikelyExplanation>
+      <QuestionForMediaMint>Was the Q4 drop purely an inventory availability issue, or were there also demand-side problems, floor price changes, or partner technical issues?</QuestionForMediaMint>
+    </Q4_2025_Crash>
+
+    <AdExchangeAdvertiserDetail>
+      <Title>Who is buying through Ad Exchange (Programmatic Demand)</Title>
+      <Description>These are advertisers spending programmatically. Some of them could potentially be converted to direct deals at higher CPMs.</Description>
+      <Advertiser name="AdWords small businesses" total="$118,029" trend="Growing significantly in 2026" />
+      <Advertiser name="Unclassified advertisers" total="$77,997" trend="Consistent" />
+      <Advertiser name="Temu" total="$17,608" trend="Growing in 2026" />
+      <Advertiser name="Communitaiment" total="$10,742" trend="Growing in 2026" />
+      <Advertiser name="GM Group" total="$9,985" trend="Declining" />
+      <Advertiser name="AT and T" total="$9,957" trend="Declining" />
+      <Advertiser name="Kering" total="$7,490" trend="Stable" />
+      <Advertiser name="Comcast Corporation" total="$6,982" trend="Declining" />
+      <Advertiser name="Goldman Sachs" total="$4,197" trend="Growing" />
+      <Advertiser name="Charter Communications" total="$4,367" trend="Volatile" />
+      <Insight>AT and T, Kering, Comcast, Goldman Sachs, and GM Group are all spending programmatically at $2 CPM when they could be approached for direct deals at $15-25 CPM. That is a direct-to-programmatic conversion opportunity.</Insight>
+    </AdExchangeAdvertiserDetail>
+  </Section7_ProgrammaticAnalysis>
+
+  <Section8_YieldAnalysis>
+    <Title>YIELD AND EFFICIENCY METRICS</Title>
+    <ECPMComparison>
+      <Channel name="Direct Sponsorship" ecpm="$27.56" />
+      <Channel name="Direct Standard" ecpm="$17.73" />
+      <Channel name="Direct Overall" ecpm="$19.73" />
+      <Channel name="Programmatic Overall" ecpm="$1.99" />
+      <Channel name="Programmatic Ad Exchange" ecpm="$1.75" />
+      <Channel name="Programmatic Price Priority" ecpm="$2.15" />
+      <Channel name="House" ecpm="$0.29" />
+    </ECPMComparison>
+    <ImpressionEfficiency>
+      <Metric label="Direct takes 31% of impressions but earns 84% of revenue">Efficient</Metric>
+      <Metric label="Programmatic takes 57% of impressions but earns 15.5% of revenue">Inefficient</Metric>
+      <Metric label="House takes 11.5% of impressions and earns 0.5% of revenue">Waste</Metric>
+    </ImpressionEfficiency>
+    <QuarterlyECPM>
+      <Quarter period="Q1 2025" totalImpressions="291,868,833" totalRevenue="$1,085,734" overallECPM="$3.72" />
+      <Quarter period="Q2 2025" totalImpressions="263,356,543" totalRevenue="$1,984,718" overallECPM="$7.54" />
+      <Quarter period="Q3 2025" totalImpressions="243,110,021" totalRevenue="$1,329,912" overallECPM="$5.47" />
+      <Quarter period="Q4 2025" totalImpressions="209,345,588" totalRevenue="$3,203,873" overallECPM="$15.30" />
+      <Quarter period="Q1 2026" totalImpressions="231,701,542" totalRevenue="$1,596,650" overallECPM="$6.89" />
+      <Quarter period="Q2 2026" totalImpressions="163,223,141" totalRevenue="$1,109,398" overallECPM="$6.80" />
+    </QuarterlyECPM>
+    <Insight>Q4 2025 proves the model. Fewer impressions, higher eCPM, more revenue. The goal is not to serve more impressions. The goal is to sell more inventory at direct rates. Every 10 million impressions shifted from programmatic to direct is worth an additional $177,400 in revenue.</Insight>
+  </Section8_YieldAnalysis>
+
+  <Section9_Recommendations>
+    <Title>STRATEGIC RECOMMENDATIONS</Title>
+
+    <DirectSalesActions>
+      <Title>DIRECT SALES - IMMEDIATE ACTIONS</Title>
+      <Action priority="1" revenue_opportunity="$1,359,366">
+        <What>Reactivate the 4 churned top-10 advertisers: American Family Insurance, Celebrity Cruises, Ally Financial, LinkedIn Marketing Solutions</What>
+        <Why>These 4 alone represent 15.7% of all historical direct revenue. Even converting 2 of them back at 50% of prior spend recovers $340K</Why>
+        <Who>Sales team with AdOps support on inventory proposals</Who>
+      </Action>
+      <Action priority="2" revenue_opportunity="$500,000 to $700,000">
+        <What>Run a reactivation campaign targeting all 34 churned advertisers with custom inventory packages</What>
+        <Why>$3.5M in revenue vanished. Even a 15-20% reactivation rate brings back $500K-700K</Why>
+        <Who>Sales team with specific proposals based on their original placements</Who>
+      </Action>
+      <Action priority="3" revenue_opportunity="$300,000+">
+        <What>Convert new 2026 big spenders (TIAA, JPMorgan, Reliance, Target) to multi-quarter commitments NOW before they become one-timers</What>
+        <Why>The pattern is clear - advertisers come once and leave. We must lock them in while they are warm</Why>
+        <Who>Account management with long-term deal structures</Who>
+      </Action>
+      <Action priority="4" revenue_opportunity="$200,000+">
+        <What>Approach programmatic advertisers (AT and T, Kering, Goldman Sachs, Comcast, GM Group) for direct deals</What>
+        <Why>They are already on our site at $2 CPM. Offer them premium placements at $15-20 CPM with guaranteed viewability and placement</Why>
+        <Who>Sales with programmatic buyer contact info from Media Mint</Who>
+      </Action>
+      <Action priority="5" revenue_opportunity="Retention">
+        <What>Create a loyalty framework for Always-On advertisers (Rolex, Toyota, HP, Novartis, P and G) with annual deal incentives</What>
+        <Why>Losing even one of these is catastrophic. Rolex alone is 10% of direct revenue</Why>
+        <Who>Senior account management</Who>
+      </Action>
+    </DirectSalesActions>
+
+    <ProgrammaticActions>
+      <Title>PROGRAMMATIC - OPTIMIZATION ACTIONS</Title>
+      <Action priority="1">
+        <What>Demand a full audit from Media Mint on the Q4 2025 collapse and current recovery plan</What>
+        <Why>We lost $257K in one quarter. Even accounting for direct inventory consumption, the drop is disproportionate</Why>
+      </Action>
+      <Action priority="2">
+        <What>Diversify away from Media.net dependency - add 2 to 3 new header bidding partners</What>
+        <Why>38.5% of programmatic revenue in one partner is dangerous. Media.net already dropped 47% YoY</Why>
+      </Action>
+      <Action priority="3">
+        <What>Kill Magnite and SimpleFeed from the programmatic stack</What>
+        <Why>Combined $0 in recent quarters. They add latency and complexity for zero return</Why>
+      </Action>
+      <Action priority="4">
+        <What>Investigate and activate Preferred Deals properly</What>
+        <Why>Only $146 total in Preferred Deals over 18 months. This channel is essentially unused but can yield $5+ eCPM</Why>
+      </Action>
+      <Action priority="5">
+        <What>Reduce house ad impressions from 12% average to under 5%</What>
+        <Why>160 million house impressions over 18 months. At even $2 eCPM that is $320K left on the table</Why>
+      </Action>
+    </ProgrammaticActions>
+
+    <InventoryStrategy>
+      <Title>INVENTORY MANAGEMENT</Title>
+      <Action priority="1">
+        <What>Map available inventory from churned advertisers and create sales packages</What>
+        <Why>When Celebrity Cruises, Ally, LinkedIn left, their placements went to remnant. Package and re-sell them</Why>
+      </Action>
+      <Action priority="2">
+        <What>Push more inventory into Sponsorship format versus Standard</What>
+        <Why>Sponsorship eCPM is $27.56 versus Standard at $17.73. A 10% shift to Sponsorship adds $1M+ annually at current volumes</Why>
+      </Action>
+    </InventoryStrategy>
+  </Section9_Recommendations>
+
+  <Section10_QuestionsForBoss>
+    <Title>QUESTIONS THAT NEED ANSWERS BEFORE STAGE 2</Title>
+    <Question number="1">Do we have advertiser vertical or industry tags in GAM? I need to do a vertical concentration analysis to identify which industries are underrepresented and where sales should focus prospecting.</Question>
+    <Question number="2">Can we get the contract end dates and IO terms for the top 20 active advertisers? I need to know which renewals are coming up in the next 90 days so we can flag them as retention priorities.</Question>
+    <Question number="3">Does Media Mint have a formal explanation for the Q4 2025 programmatic collapse? Was it purely inventory availability, or were there demand-side, floor price, or technical issues?</Question>
+    <Question number="4">What is our fill rate by ad unit right now? I need to identify which specific placements have unsold inventory so we can package them for new advertiser pitches.</Question>
+    <Question number="5">Do we have audience segment data connected? If we can show advertisers our audience composition, it strengthens the pitch for higher CPMs and new verticals.</Question>
+    <Question number="6">For the churned advertisers, does the sales team know WHY they left? Was it performance, budget cuts, agency change, or simply no follow-up? The answer changes the reactivation strategy completely.</Question>
+    <Question number="7">What is the sales team target for new logos in 2026? We brought in $647K from new advertisers but lost $3.5M from churn. Is there a pipeline number we should be benchmarking against?</Question>
+    <Question number="8">Are there programmatic advertiser contacts available through Media Mint? Specifically for AT and T, Kering, Goldman Sachs, and Comcast who are spending programmatically and could be approached for direct deals.</Question>
+    <Question number="9">Should we be looking at device-level or geo-level breakdowns? Different devices and geographies have different yield profiles, and it may reveal where we are leaving money on the table.</Question>
+    <Question number="10">What is the total available inventory forecast for Q3 and Q4 2026? I need to quantify exactly how much room we have to accommodate new advertisers without displacing existing ones.</Question>
+  </Section10_QuestionsForBoss>
+
+  <Section11_WhatComesNext>
+    <Title>STAGE 2 PLAN - WHAT WE BUILD NEXT</Title>
+    <NextStep number="1">Vertical analysis - Once we tag advertisers by industry, we identify gap verticals to target</NextStep>
+    <NextStep number="2">Inventory availability map - Which ad units have capacity for new campaigns</NextStep>
+    <NextStep number="3">Pricing strategy - Are we underpricing? Competitive CPM benchmarking</NextStep>
+    <NextStep number="4">90-day reactivation plan - Specific outreach plan per churned advertiser with custom proposals</NextStep>
+    <NextStep number="5">Media Mint accountability framework - KPIs and targets for programmatic optimization</NextStep>
+    <NextStep number="6">Client-facing dashboard brief - Handoff to data team for visualization build</NextStep>
+  </Section11_WhatComesNext>
+
+</ExecutiveAnalysis>
