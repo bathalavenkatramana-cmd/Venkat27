@@ -3,15 +3,16 @@
   <DocumentInfo>
     <Title>Stage 1 - Revenue and Sales Strategy Analysis</Title>
     <Subtitle>Direct Sales Revenue Concentration and Programmatic Performance Review</Subtitle>
-    <Period>Q1 2025 through Q2 2026 (January 2025 - May 2026)</Period>
+    <Period>January 2025 through 25 May 2026</Period>
+    <Note>Q2 2026 data runs from 1 April to 25 May 2026 only. It is an incomplete quarter. All Q2 2026 figures are partial and will increase as the quarter closes. Do not compare Q2 2026 directly to full prior quarters without adjusting for the shorter window.</Note>
     <PreparedBy>AdOps Strategy Team</PreparedBy>
     <Classification>Executive Review - Confidential</Classification>
   </DocumentInfo>
 
   <ExecutiveSummary>
-    <Headline>We earned $10.3M in 18 months. But $3.5M of that came from advertisers who have not come back. We are replacing churn at only 18 cents on the dollar. That is a revenue crisis hiding behind a decent topline number.</Headline>
+    <Headline>We earned $10.3M across 17 months of data (January 2025 to 25 May 2026). But $3.5M of that came from advertisers who have not come back. We are replacing churn at only 18 cents on the dollar. That is a revenue crisis hiding behind a decent topline number.</Headline>
     <KeyNumbers>
-      <Item label="Total Revenue (Q1 2025 - Q2 2026)">$10,310,286</Item>
+      <Item label="Total Revenue (January 2025 - 25 May 2026)">$10,310,286</Item>
       <Item label="Direct Revenue">$8,667,845 (84.1% of total)</Item>
       <Item label="Programmatic Revenue">$1,595,903 (15.5% of total)</Item>
       <Item label="Revenue from Churned Advertisers (spent 2025, not back in 2026)">$3,503,967</Item>
@@ -41,7 +42,7 @@
       <Quarter period="Q3 2025" direct="$979,462" programmatic="$339,484" house="$10,966" total="$1,329,912" />
       <Quarter period="Q4 2025" direct="$3,118,230" programmatic="$82,747" house="$2,896" total="$3,203,873" />
       <Quarter period="Q1 2026" direct="$1,349,890" programmatic="$237,544" house="$9,217" total="$1,596,650" />
-      <Quarter period="Q2 2026" direct="$841,285" programmatic="$263,353" house="$4,759" total="$1,109,398" />
+      <Quarter period="Q2 2026 (partial: Apr 1 - May 25)" direct="$841,285" programmatic="$263,353" house="$4,759" total="$1,109,398" />
     </QuarterlyTrend>
 
     <Insight>Direct earns $19.73 per thousand impressions. Programmatic earns $1.99. That is a 10x gap. Every impression that goes to programmatic instead of a direct deal costs us roughly $17.74 per thousand in lost revenue. This is the single biggest yield lever available.</Insight>
@@ -51,7 +52,7 @@
 
   <Section2_DirectSales_AdvertiserSegmentation>
     <Title>DIRECT SALES - ADVERTISER SEGMENTATION</Title>
-    <Narrative>We classified every direct advertiser into five categories based on their spending behavior across Q1 2025 through Q2 2026. This tells us who is reliable, who left, who is new, and who came once and vanished. The picture is not comforting.</Narrative>
+    <Narrative>We classified every direct advertiser into five categories based on their spending behavior from January 2025 through 25 May 2026. This tells us who is reliable, who left, who is new, and who came once and vanished. The picture is not comforting.</Narrative>
 
     <Category1_AlwaysOn>
       <Label>ALWAYS-ON: Active in both 2025 AND 2026 across multiple quarters</Label>
