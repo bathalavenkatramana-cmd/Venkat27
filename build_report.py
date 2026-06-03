@@ -51,8 +51,11 @@ for i, row in enumerate(ws2.iter_rows(values_only=True)):
     kv = str(kv).strip()
     if kv.endswith(".0"):
         kv = kv[:-2]
-    kv_impr[kv] += to_int(impr)
-    if isinstance(d, datetime):
+    iv = to_int(impr)
+    kv_impr[kv] += iv
+    # "Last date used" = last date the key value actually DELIVERED (impressions > 0),
+    # not merely the last day it appeared as a row in the report.
+    if isinstance(d, datetime) and iv > 0:
         if kv not in kv_lastdate or d > kv_lastdate[kv]:
             kv_lastdate[kv] = d
 
@@ -113,8 +116,8 @@ wb_out = openpyxl.load_workbook(SRC)  # full load to preserve all tabs
 ws = wb_out["personas_1_2026-05-28.csv"]
 
 # headers
-headers = ["Persona Name", "Last date used", "Overall impressions till date",
-           "Key Value(s) (Persona ID)", "Days since last used",
+headers = ["Persona Name", "Last delivered date (impr>0)", "Overall impressions till date",
+           "Key Value(s) (Persona ID)", "Days since last delivered",
            "Status / Note", "Recommendation"]
 hdr_fill = PatternFill("solid", fgColor="1F4E78")
 hdr_font = Font(bold=True, color="FFFFFF")
@@ -197,7 +200,7 @@ if "Remove List" in wb_out.sheetnames:
     del wb_out["Remove List"]
 rem = wb_out.create_sheet("Remove List", 1)
 
-rem_headers = ["Persona Name", "Key Value(s) (Persona ID)", "Last date used",
+rem_headers = ["Persona Name", "Key Value(s) (Persona ID)", "Last delivered date (impr>0)",
                "Overall impressions till date", "Reason to remove"]
 for c, h in enumerate(rem_headers, start=1):
     cell = rem.cell(row=1, column=c, value=h)
