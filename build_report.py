@@ -191,7 +191,51 @@ for i, w in enumerate(widths, start=1):
     summ.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
 summ.freeze_panes = "A2"
 
+# ---------------- Remove List sheet (only removal candidates) ---------------
+# Includes: never-delivered (0 impressions), unmapped names, and date-stale rows.
+if "Remove List" in wb_out.sheetnames:
+    del wb_out["Remove List"]
+rem = wb_out.create_sheet("Remove List", 1)
+
+rem_headers = ["Persona Name", "Key Value(s) (Persona ID)", "Last date used",
+               "Overall impressions till date", "Reason to remove"]
+for c, h in enumerate(rem_headers, start=1):
+    cell = rem.cell(row=1, column=c, value=h)
+    cell.fill = hdr_fill; cell.font = hdr_font
+    cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+
+reason_map = {
+    "Mapped but no GAM delivery": "Has a key value but never delivered any impressions",
+    "No mapping in Key Values tab": "Not present in the Key Values tab - no key value found",
+}
+remove_rows = [r for r in ordered if r["prio"] in (0, 1, 2)]
+for idx, r in enumerate(remove_rows, start=2):
+    reason = reason_map.get(r["status"], f"Stale - last used {r['days']}d ago")
+    rem.cell(row=idx, column=1, value=r["name"])
+    rem.cell(row=idx, column=2, value=r["ids"])
+    rem.cell(row=idx, column=3, value=r["last"].strftime("%Y-%m-%d") if r["last"] else "")
+    rem.cell(row=idx, column=4, value=("" if r["impr"] is None else r["impr"]))
+    rem.cell(row=idx, column=5, value=reason)
+    style_row(rem, idx, r["status"])
+rem_widths = [40, 26, 16, 28, 52]
+for i, w in enumerate(rem_widths, start=1):
+    rem.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
+rem.freeze_panes = "A2"
+
 wb_out.save(OUT)
+print("Remove List rows:", len(remove_rows))
+
+# ---------------- Standalone Remove List CSV --------------------------------
+import csv
+with open("Remove List.csv", "w", newline="", encoding="utf-8-sig") as f:
+    w = csv.writer(f)
+    w.writerow(rem_headers)
+    for r in remove_rows:
+        reason = reason_map.get(r["status"], f"Stale - last used {r['days']}d ago")
+        w.writerow([r["name"], r["ids"],
+                    r["last"].strftime("%Y-%m-%d") if r["last"] else "",
+                    ("" if r["impr"] is None else r["impr"]), reason])
+print("Wrote Remove List.csv")
 
 # ---------------------------------------------------------------
 # 4) Console summary
