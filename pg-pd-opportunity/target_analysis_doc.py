@@ -52,6 +52,9 @@ for s in SECS:
 def up_m(r,price,pct=BASE): return (r["prog"]/MONTHS)*pct/1000*(price-r["pcpm"])
 def cur_m(r,pct=BASE):      return (r["prog"]/MONTHS)*pct*r["pcpm"]/1000
 def pg_m(r,price,pct=BASE): return (r["prog"]/MONTHS)*pct*price/1000
+def blend(items,ik,ck):
+    tot=sum(r[ik] for r in items); return (sum(r[ik]*r[ck] for r in items)/tot) if tot else 0.0
+def tgt_opp(items,price):   return sum(up_m(r,price) for r in items if r["cls"]=="Target")
 
 TGT=[r for r in R if r["cls"]=="Target"]
 RES=[r for r in R if r["cls"]=="Reserved"]
@@ -211,8 +214,39 @@ bullet("Programmatic share ≥ 60% AND direct share ≤ 35%. These are re-sellab
 bullet("Direct share ≥ 40% — the sales team already owns these; excluded from conversion.",lead="Reserved rule —")
 bullet("shift 5% / 10% / 15% of a slot's programmatic impressions to PG/PD at a fixed $8 and $10 eCPM; uplift is measured against that slot's actual programmatic CPM. Monthly = period ÷ 5.",lead="Model —")
 
-# ---- section 1: TARGETS ----
-H("1.  Conversion Targets — Ranked",size=12)
+# ---- section 1: SECTION-WISE SUMMARY ----
+gstd=sum(r["std"] for r in R); gpr=sum(r["prog"] for r in R); gho=sum(r["house"] for r in R); gt=gstd+gpr+gho
+H("1.  Section-wise Summary",size=12)
+body("All five sections at a glance — total impressions and blended CPMs by channel, the programmatic vs direct split, "
+     "and the target PG/PD opportunity within each section (10% shift).")
+rows=[]
+for s in SECS:
+    it=[r for r in R if r["sec"]==s]
+    std=sum(r["std"] for r in it); prog=sum(r["prog"] for r in it); house=sum(r["house"] for r in it); tot=std+prog+house
+    rows.append([s,f"{std:,.0f}",f"{prog:,.0f}",f"{house:,.0f}",f"{prog/tot*100:.0f}%",f"{std/tot*100:.0f}%",
+                 f"${blend(it,'std','scpm'):.2f}",f"${blend(it,'prog','pcpm'):.2f}",m(tgt_opp(it,PA)),m(tgt_opp(it,PB))])
+rows.append(("GRAND",["All sections",f"{gstd:,.0f}",f"{gpr:,.0f}",f"{gho:,.0f}",f"{gpr/gt*100:.0f}%",f"{gstd/gt*100:.0f}%",
+             f"${blend(R,'std','scpm'):.2f}",f"${blend(R,'prog','pcpm'):.2f}",m(tgt_opp(R,PA)),m(tgt_opp(R,PB))]))
+table(["Section","Direct imp","Prog. imp","House imp","Prog %","Dir %","Direct CPM","Prog CPM","Target opp/mo @$8","@$10"],rows,
+      widths=[1.45,1.15,1.15,1.05,0.6,0.6,0.9,0.85,1.15,0.9],rf=1,fs=8.6)
+
+# ---- section 2: SLOT-WISE SUMMARY ----
+H("2.  Slot-wise Summary",size=12)
+body("The six slots aggregated across all sections — showing where impression volume concentrates and how heavily each "
+     "slot skews programmatic vs direct.")
+rows=[]; slot_items={sl:[r for r in R if r["slot"]==sl] for sl in SLOTS}
+for sl in sorted(SLOTS,key=lambda x:-sum(r["prog"] for r in slot_items[x])):
+    it=slot_items[sl]
+    std=sum(r["std"] for r in it); prog=sum(r["prog"] for r in it); house=sum(r["house"] for r in it); tot=std+prog+house
+    rows.append([sl,f"{std:,.0f}",f"{prog:,.0f}",f"{house:,.0f}",f"{prog/tot*100:.0f}%",f"{std/tot*100:.0f}%",
+                 f"${blend(it,'std','scpm'):.2f}",f"${blend(it,'prog','pcpm'):.2f}",m(tgt_opp(it,PA)),m(tgt_opp(it,PB))])
+rows.append(("GRAND",["All slots",f"{gstd:,.0f}",f"{gpr:,.0f}",f"{gho:,.0f}",f"{gpr/gt*100:.0f}%",f"{gstd/gt*100:.0f}%",
+             f"${blend(R,'std','scpm'):.2f}",f"${blend(R,'prog','pcpm'):.2f}",m(tgt_opp(R,PA)),m(tgt_opp(R,PB))]))
+table(["Slot","Direct imp","Prog. imp","House imp","Prog %","Dir %","Direct CPM","Prog CPM","Target opp/mo @$8","@$10"],rows,
+      widths=[1.45,1.15,1.15,1.05,0.6,0.6,0.9,0.85,1.15,0.9],rf=1,fs=8.6)
+
+# ---- section 3: TARGETS ----
+H("3.  Conversion Targets — Ranked",size=12)
 body(f"The {len(TGT)} slots that meet the target rule, ranked by programmatic volume. Uplift is monthly at the base 10% shift.")
 rows=[]
 for r in sorted(TGT,key=lambda x:-x["prog"]):
@@ -225,7 +259,7 @@ table(["Section · Slot","Prog. imp","Prog %","Dir %","Prog CPM","Direct CPM","U
 img("t1_targets.png",w=9.2,cap="Figure 1 — Top targets by monthly programmatic impressions (prog% / dir% and current prog CPM labeled).")
 
 # ---- section 2: RESERVED ----
-H("2.  Reserved for Direct Sales",size=12)
+H("4.  Reserved for Direct Sales",size=12)
 body("These slots are direct-dominant (direct share ≥ 40%) — the sales team already monetizes them well. We explicitly "
      "leave them out of the PG/PD push to avoid competing with direct.")
 rows=[]
@@ -238,7 +272,7 @@ body("Pattern: leaderboard1 across sections and most of Tech are direct territor
      "premium billboard the sales team leads with.",italic=True,size=9.5,color=MUT)
 
 # ---- section 3: per-section granular ----
-H("3.  Section-by-Section Detail — Every Slot",size=12)
+H("5.  Section-by-Section Detail — Every Slot",size=12)
 body("The full granular view: for each section, every slot's impressions, the CPMs it is selling at (direct vs programmatic), "
      "its programmatic/direct share, its classification, and the monthly PG/PD opportunity at 10%.")
 for s in SECS:
@@ -257,7 +291,7 @@ for s in SECS:
           widths=[1.25,1.05,1.05,0.6,0.6,0.75,0.8,0.95,0.95,0.98],rf=1,fs=8.3,classcol=7)
 
 # ---- section 4: model ----
-H("4.  Conversion Model — Targets Only",size=12)
+H("6.  Conversion Model — Targets Only",size=12)
 body(f"Applying the shift to the {len(TGT)} target slots (30.1M programmatic impressions/month, ${tcur_m:,.0f}/mo today):")
 sc=[]
 for pct in (0.05,0.10,0.15):
@@ -270,7 +304,7 @@ img("t3_sections.png",w=8.8,cap="Figure 2 — Programmatic inventory by section:
 img("t2_uplift.png",w=9.2,cap="Figure 3 — Incremental monthly revenue by target slot at $8 / $10 (10% shift).")
 
 # ---- section 5 ----
-H("5.  What This Means",size=12)
+H("7.  What This Means",size=12)
 bullet(f"three-quarters of programmatic in these slots is convertible — high prog, low direct — so the opportunity is broad, not niche.",lead="Scale —")
 bullet(f"stickyfooter1 (Entertainment, U.S., Health) alone drives ~{ (up_m(next(r for r in TGT if r['sec']=='Entertainment' and r['slot']=='stickyfooter1'),PA)+up_m(next(r for r in TGT if r['sec']=='U.S.' and r['slot']=='stickyfooter1'),PA)+up_m(next(r for r in TGT if r['sec']=='Health' and r['slot']=='stickyfooter1'),PA))/u8_10*100:.0f}% of the 10% uplift — start there.",lead="Focus —")
 bullet("target pools clear at ~$2.44 vs direct at $19–$44; PG/PD at $8–$10 sits comfortably between — capturing value without undercutting direct.",lead="Headroom —")
